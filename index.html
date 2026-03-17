@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Paróquia São Pedro Apóstolo | 30 Anos de Fé em Itaperuçu</title>
+    <meta name="description" content="Comunidade Católica em Itaperuçu/PR. Horários de missas, confissões, pastorais e a história de 30 anos da Paróquia São Pedro Apóstolo.">
+    <meta name="keywords" content="Paróquia São Pedro Apóstolo, Itaperuçu, Missas Itaperuçu, Igreja Católica, 30 anos de fé">
+    <meta name="author" content="André Abrão">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andreabrao.github.io/portifolio/"> 
+    <meta property="og:title" content="Paróquia São Pedro Apóstolo - Itaperuçu/PR">
+    <meta property="og:description" content="Venha celebrar conosco! Confira nossos horários de missas e conheça nossa comunidade.">
+    <meta property="og:image" content="matriz.png"> 
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="matriz.png" alt="Logo 30 Anos" class="logo-topbar">
+            <div class="logo-text">
+                <span>Paróquia</span>
+                <strong>SÃO PEDRO APÓSTOLO</strong>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#horarios">Missas</a></li>
+                <li><a href="#pastorais">Pastorais</a></li>
+                <li><a href="#comunidade">Nossa História</a></li>
+                <li><a href="#contato" class="btn-contato-nav">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="selo-30-anos">1996 • 2026</div>
+                <h1>Edificando sobre a Rocha</h1>
+                <p class="versiculo">"Tu és Pedro, e sobre esta pedra edificarei a minha Igreja." <br><span>Mateus 16:18</span></p>
+                <div class="cta-group">
+                    <a href="#horarios" class="btn-primary">Horários de Missa</a>
+                    <a href="#contato" class="btn-secondary">Falar com a Secretaria</a>
+                </div>
+            </div>
+            <a href="#horarios" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+        </section>
+
+        <section class="liturgical-time">
+            <div class="container">
+                <div class="liturgy-banner">
+                    <div class="liturgy-info">
+                        <span class="label">Tempo Litúrgico</span>
+                        <h2 id="current-liturgy">Tempo Comum</h2>
+                        <p id="liturgy-desc">É tempo de esperança e de escuta atenta à Palavra de Deus.</p>
+                    </div>
+                    <div class="liturgy-color">
+                        <div class="color-circle" id="liturgy-circle"></div>
+                        <span id="color-name">Verde</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="horarios" class="info-section">
+            <div class="container">
+                <h2 class="section-title">Celebrações <span>Eucarísticas</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-cross"></i></div>
+                        <h3>Quarta-Feria</h3>
+                        <p class="time">ás 15:00h</p>
+                        <p class="desc">São Cristóvão</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-church"></i></div>
+                        <h3>Quinta-Feira</h3>
+                        <p class="time">18:30 | 19:30h</p>
+                        <p class="desc">Santa missa</p>
+                    </div>
+                    <div class="card highlight">
+                        <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                        <h3>Domingo</h3>
+                        <p class="time">08:00 | 10:00 | 19:00</p>
+                        <p class="desc">Missa Solene</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="daily-inspiration">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title" style="margin-bottom: 40px;">Momento de <span>Reflexão</span></h2>
+                
+                <div class="inspiration-grid">
+                    <div class="inspiration-card">
+                        <i class="fa-solid fa-scroll"></i>
+                        <span>Versículo do Dia</span>
+                        <p id="verse-text">"O Senhor é o meu pastor; nada me faltará."</p>
+                        <small id="verse-ref">Salmos 23:1</small>
+                    </div>
+                    <div class="inspiration-card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Inspiração</span>
+                        <p id="motivation-text">"A fé não torna as coisas fáceis, ela as torna possíveis."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secretaria-section">
+            <div class="container">
+                <h2 class="section-title">Atendimento e <span>Sacramentos</span></h2>
+                
+                <div class="secretaria-grid">
+                    <div class="sec-box card"> 
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h3>Atendimento da Secretaria</h3>
+                        <p>terça a sexta-feira, das 09:00 às 12:00 | 14:00 às 17:00</p>
+                        <p>Sábado: 09:00 às 12:00</p>
+                    </div>
+                    <div class="sec-box card"> 
+                        <i class="fa-solid fa-hands-praying"></i>
+                        <h3>Confissões</h3>
+                        <p>com agendamento prévio na secretaria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pastorais" class="pastorais">
+            <div class="container">
+                <h2 class="section-title">Vida <span>Comunitária</span></h2>
+                <div class="pastorais-grid">
+                    <div class="pastoral-item" onclick="openModal('Batismo')">
+                        <i class="fa-solid fa-baby"></i>
+                        <h4>Batismo</h4>
+                    </div>
+                    <div class="pastoral-item" onclick="openModal('Catequese')">
+                        <i class="fa-solid fa-book-bible"></i>
+                        <h4>Catequese</h4>
+                    </div>
+                    <div class="pastoral-item" onclick="openModal('Vicentinos')">
+                        <i class="fa-solid fa-heart"></i>
+                        <h4>Vicentinos</h4>
+                    </div>
+                    <div class="pastoral-item" onclick="openModal('Canto Litúrgico')">
+                        <i class="fa-solid fa-music"></i>
+                        <h4>Canto Litúrgico</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="pastoralModal" class="modal">
+            <div class="modal-content card">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Inscrição Pastoral</h2>
+                <p>Preencha os dados abaixo para enviar a secretaria.</p>
+                
+                <form id="pastoralForm">
+                    <input type="hidden" id="selectedPastoral" name="pastoral">
+                    <div class="input-group">
+                        <input type="text" placeholder="Seu Nome Completo" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Seu WhatsApp (41) 99999-9999" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Como gostaria de ajudar ou qual sua dúvida?" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Enviar Interesse</button>
+                </form>
+            </div>
+        </div>
+
+        <a href="https://wa.me/+554136033312" class="whatsapp-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Dúvidas? Fale conosco!</span>
+        </a>
+
+        <section id="comunidade" class="about">
+            <div class="container">
+                <div class="about-text" id="about-container" style="text-align: center;">
+                    <h2 class="section-title">Nossa Missão em <span>Itaperuçu</span></h2>
+                    <p>
+                        Há 30 anos, somos uma comunidade viva dedicada à caridade, à oração e ao acolhimento. 
+                        Localizada no coração de Itaperuçu, a Paróquia São Pedro Apóstolo é o ponto de encontro 
+                        para quem busca fortalecer sua fé e servir ao próximo. Fundada com o propósito de ser 
+                        um farol de esperança, nossa história se confunde com o crescimento da própria cidade, 
+                        acolhendo gerações de famílias em seus momentos mais sagrados.
+                    </p>
+                    <button class="read-more-btn" onclick="toggleReadMore()">Ler História Completa</button>
+                    <br><br>
+                    <a href="#" class="btn-primary">Ver Galeria de Fotos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="location">
+            <div class="container">
+                <h2 class="section-title">Como <span>Chegar</span></h2>
+                <div class="map-container" style="height: 450px; width: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 35px rgba(7, 18, 35, 0.1);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.435753065662!2d-49.348421423712615!3d-25.222239402513224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dceed791f763f7%3A0xd8bf817ad9af6ff1!2sPar%C3%B3quia%20S%C3%A3o%20Pedro%20Ap%C3%B3stolo!5e0!3m2!1spt-PT!2sbr!4v1710534000000!5m2!1spt-PT!2sbr" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="donations">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title">Gestão e <span>Generosidade</span></h2>
+                
+                <div class="donation-card" style="margin: 0 auto; max-width: 800px;">
+                    <i class="fa-solid fa-dove"></i>
+                    <h2>Seja um Dizimista</h2>
+                    <p style="margin-bottom: 20px;">Sua contribuição ajuda a manter nossas obras sociais e a evangelização em nossa paróquia.</p>
+                    
+                    <div class="pix-box" style="display: inline-block; padding: 15px 30px;">
+                        <span>Chave PIX:</span>
+                        <strong>76.648.500/0141-56</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>SÃO PEDRO APÓSTOLO</h3>
+                    <p>Edificando uma comunidade viva de fé, esperança e caridade no coração de Itaperuçu desde 1996.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/p/Par%C3%B3quia-S%C3%A3o-Pedro-Ap%C3%B3stolo-100069754553797/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/paroquiasaopedroapostoloo/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/+554136033312" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Acesso Rápido</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#horarios">Horários de Missa</a></li>
+                        <li><a href="#pastorais">Pastorais e Movimentos</a></li>
+                        <li><a href="#comunidade">Nossa História</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-info">
+                    <h4>Contato</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Av. São Pedro - Centro<br>Itaperuçu/PR</p>
+                    <p><i class="fa-solid fa-phone"></i> (41) 3603-3312</p>
+                    <p><i class="fa-solid fa-envelope"></i> pspi@mitradecuritiba.org.br</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Paróquia São Pedro Apóstolo.</p>
+                <p>
+                    <small>Desenvolvido com fé e tecnologia por 
+                        <a href="https://andreabrao.github.io/portifolio/" target="_blank" class="developer-link">André Abrão</a>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </footer>
+<script>
+    // =========================================
+    // 1. LÓGICA DO MOUSE PERSONALIZADO
+    // =========================================
+    const cursorDot = document.querySelector(".cursor-dot");
+    const cursorOutline = document.querySelector(".cursor-outline");
+
+    window.addEventListener("mousemove", function (e) {
+        if (document.body.classList.contains('modal-active')) {
+            cursorDot.style.opacity = "0";
+            cursorOutline.style.opacity = "0";
+            cursorDot.style.display = "none";
+            cursorOutline.style.display = "none";
+            return;
+        }
+
+        cursorDot.style.display = "block";
+        cursorOutline.style.display = "block";
+        cursorDot.style.opacity = "1";
+        cursorOutline.style.opacity = "1";
+
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 400, fill: "forwards" });
+    });
+
+    // =========================================
+    // 2. SISTEMA DE INSPIRAÇÃO (MENSAGEM DO PADRE)
+    // =========================================
+    // Nota: As listas 'verses' e 'motivations' foram mantidas no código para 
+    // uso futuro, mas a função agora exibe a mensagem fixa do Padre.
+    
+    const verses = [
+        { text: '"O Senhor é o meu pastor; nada me faltará."', ref: "Salmos 23:1" },
+        { text: '"Tudo posso naquele que me fortalece."', ref: "Filipenses 4:13" },
+        { text: '"O amor é paciente, o amor é bondoso."', ref: "1 Coríntios 13:4" },
+        { text: '"Não fui eu que ordenei a você? Seja forte e corajoso!"', ref: "Josué 1:9" },
+        { text: '"O Senhor é a minha luz e a minha salvação; de quem terei medo?"', ref: "Salmos 27:1" },
+        { text: '"Peçam, e lhes será dado; busquem, e encontrarão."', ref: "Mateus 7:7" },
+        { text: '"Ainda que eu andasse pelo vale da sombra da morte, não temeria mal algum."', ref: "Salmos 23:4" },
+        { text: '"Onde estiver o seu tesouro, aí estará também o seu coração."', ref: "Mateus 6:21" },
+        { text: '"Se Deus é por nós, quem será contra nós?"', ref: "Romanos 8:31" },
+        { text: '"Lâmpada para os meus pés é tua palavra e luz, para o meu caminho."', ref: "Salmos 119:105" }
+    ];
+
+    const motivations = [
+        "A fé não torna as coisas fáceis, ela as torna possíveis.",
+        "Comece o dia com o coração grato e veja a mágica acontecer.",
+        "Sua luz brilha mais forte quando você caminha com esperança.",
+        "A oração é a chave para abrir o dia e o cadeado para fechar a noite.",
+        "Deus não nos dá o que queremos, Ele nos dá o que precisamos para crescer.",
+        "Onde há fé, há amor; onde há amor, há paz; onde há paz, está Deus.",
+        "Pequenos gestos de caridade podem mudar o dia de alguém.",
+        "A paciência é a virtude de quem confia nos planos do Senhor.",
+        "A gratidão transforma o que temos em suficiente.",
+        "Deixe que a sua fé seja maior que os seus medos hoje."
+    ];
+
+    function updateInspiration() {
+        // --- ÁREA DE ATUALIZAÇÃO MANUAL (MENSAGEM DO PADRE) ---
+        const mensagemDoPadre = {
+            versiculo: '"Vigiai e orai, para que não entreis em tentação."',
+            referencia: "Mateus 26:41",
+            reflexao: "Nesta Quaresma, o convite é para o silêncio interior e a escuta atenta."
+        };
+
+        const vText = document.getElementById('verse-text');
+        const vRef = document.getElementById('verse-ref');
+        const mText = document.getElementById('motivation-text');
+
+        if(vText && vRef && mText) {
+            // Efeito suave de transição
+            [vText, vRef, mText].forEach(el => el.style.opacity = 0);
+            
+            setTimeout(() => {
+                vText.innerText = mensagemDoPadre.versiculo;
+                vRef.innerText = mensagemDoPadre.referencia;
+                mText.innerText = mensagemDoPadre.reflexao;
+                [vText, vRef, mText].forEach(el => el.style.opacity = 1);
+            }, 500);
+        }
+    }
+
+    // Inicializa a mensagem fixa (setInterval removido para respeitar a escolha do Padre)
+    updateInspiration();
+
+    // =========================================
+    // 3. FUNÇÕES DO MODAL
+    // =========================================
+    function openModal(pastoralName) {
+        const modal = document.getElementById('pastoralModal');
+        const title = document.getElementById('modalTitle');
+        const inputPastoral = document.getElementById('selectedPastoral');
+
+        if (title) title.innerText = "Participar: " + pastoralName;
+        if (inputPastoral) inputPastoral.value = pastoralName;
+        
+        modal.style.display = "flex";
+        document.body.classList.add('modal-active');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('pastoralModal');
+        modal.style.display = "none";
+        document.body.classList.remove('modal-active');
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('pastoralModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    const pastoralForm = document.getElementById('pastoralForm');
+    if (pastoralForm) {
+        pastoralForm.onsubmit = function(e) {
+            e.preventDefault();
+            alert("Obrigado! Seu interesse na pastoral foi enviado com sucesso.");
+            closeModal();
+        };
+    }
+
+    // =========================================
+    // 4. CALENDÁRIO LITÚRGICO AUTOMÁTICO
+    // =========================================
+    function atualizarTempoLiturgico() {
+        const agora = new Date();
+        const ano = agora.getFullYear();
+        const hoje = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate());
+
+        function calcularPascoa(ano) {
+            const a = ano % 19;
+            const b = Math.floor(ano / 100);
+            const c = ano % 100;
+            const d = Math.floor(b / 4);
+            const e = b % 4;
+            const f = Math.floor((b + 8) / 25);
+            const g = Math.floor((b - f + 1) / 3);
+            const h = (19 * a + b - d - g + 15) % 30;
+            const i = Math.floor(c / 4);
+            const k = c % 4;
+            const l = (32 + 2 * e + 2 * i - h - k) % 7;
+            const m = Math.floor((a + 11 * h + 22 * l) / 451);
+            const mes = Math.floor((h + l - 7 * m + 114) / 31);
+            const dia = ((h + l - 7 * m + 114) % 31) + 1;
+            return new Date(ano, mes - 1, dia);
+        }
+
+        const pascoa = calcularPascoa(ano);
+        const quartaCinzas = new Date(pascoa);
+        quartaCinzas.setDate(pascoa.getDate() - 46);
+        const domingoRamos = new Date(pascoa);
+        domingoRamos.setDate(pascoa.getDate() - 7);
+        const pentecostes = new Date(pascoa);
+        pentecostes.setDate(pascoa.getDate() + 49);
+        const advento = new Date(ano, 11, 25);
+        advento.setDate(25 - (advento.getDay() || 7) - 21);
+        const natal = new Date(ano, 11, 25);
+        const batismoSenhor = new Date(ano, 0, 13);
+
+        const titulo = document.getElementById('current-liturgy');
+        const desc = document.getElementById('liturgy-desc');
+        const circulo = document.getElementById('liturgy-circle');
+        const nomeCor = document.getElementById('color-name');
+        const banner = document.querySelector('.liturgy-banner');
+
+        let tempo = { nome: "Tempo Comum", cor: "#2E7D32", textoCor: "Verde", info: "É tempo de esperança e de escuta atenta à Palavra de Deus." };
+
+        if (hoje >= quartaCinzas && hoje < domingoRamos) {
+            tempo = { nome: "Quaresma", cor: "#4A148C", textoCor: "Roxo", info: "Tempo de conversão, penitência e oração em preparação para a Páscoa." };
+        } else if (hoje >= domingoRamos && hoje < pascoa) {
+            tempo = { nome: "Semana Santa", cor: "#B71C1C", textoCor: "Vermelho", info: "Acompanhamos a Paixão, Morte e Ressurreição de Jesus Cristo." };
+        } else if (hoje >= pascoa && hoje < pentecostes) {
+            tempo = { nome: "Tempo Pascal", cor: "#F9F7F2", textoCor: "Branco", info: "Aleluia! Cristo ressuscitou e permanece conosco." };
+        } else if (hoje >= advento && hoje < natal) {
+            tempo = { nome: "Advento", cor: "#4A148C", textoCor: "Roxo", info: "Preparação alegre para o nascimento do Salvador." };
+        } else if (hoje >= natal || hoje <= batismoSenhor) {
+            tempo = { nome: "Tempo do Natal", cor: "#F9F7F2", textoCor: "Branco", info: "Celebramos a encarnação do Verbo de Deus entre nós." };
+        }
+
+        if (titulo) {
+            titulo.innerText = tempo.nome;
+            desc.innerText = tempo.info;
+            circulo.style.backgroundColor = tempo.cor;
+            nomeCor.innerText = tempo.textoCor;
+            // Aplicando a borda no topo para o layout centralizado
+            banner.style.borderTopColor = tempo.cor;
+            banner.style.borderLeftColor = "transparent"; // Remove a borda lateral antiga se existir
+        }
+    }
+
+    atualizarTempoLiturgico();
+</script>
+</body>
+</html>
