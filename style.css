@@ -5,14 +5,14 @@
     --primary: #967D28;      /* Dourado denso para legibilidade */
     --primary-glow: rgba(150, 125, 40, 0.25);
     --primary-light: #D4AF37; 
-    --dark-blue: #071223;    /* Azul profundo para contraste */
+    --dark-blue: #0b1a30;    /* Azul profundo para contraste */
     --deep-dark: #030810;
     --white: #ffffff;
     --cream: #F9F7F2;        
     --bg-light: #FBFBFA;     /* Branco "papel" minimalista */
     --glass: rgba(255, 255, 255, 0.92);
     --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    --shadow-premium: 0 15px 35px rgba(7, 18, 35, 0.05);
+    --shadow-premium: 0 15px 35px #0b1a30(7, 18, 35, 0.05);
     --shadow-vivid: 0 20px 50px rgba(150, 125, 40, 0.15);
     --radius-lg: 24px;
     --radius-pill: 100px;
@@ -698,4 +698,48 @@ body.modal-active .close-modal {
     letter-spacing: 1px;
     color: var(--dark-blue);
     opacity: 0.7;
+}
+
+/* Remove os pontos da lista e alinha os links */
+.footer-list {
+    list-style: none; /* Esta linha remove as bolinhas */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+}
+
+.footer-list a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    display: inline-block;
+    position: relative;
+}
+
+/* Efeito da linha dourada (igual ao menu superior) */
+.footer-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.footer-list a:hover {
+    color: var(--primary);
+    transform: translateX(5px); /* Efeito de deslizar */
+}
+
+.footer-list a:hover::after {
+    width: 100%;
 }

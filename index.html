@@ -258,7 +258,7 @@
 
                 <div class="footer-links">
                     <h4>Acesso Rápido</h4>
-                    <ul>
+                    <ul class="footer-list">
                         <li><a href="#home">Início</a></li>
                         <li><a href="#horarios">Horários de Missa</a></li>
                         <li><a href="#pastorais">Pastorais e Movimentos</a></li>
@@ -320,9 +320,6 @@
     // =========================================
     // 2. SISTEMA DE INSPIRAÇÃO (MENSAGEM DO PADRE)
     // =========================================
-    // Nota: As listas 'verses' e 'motivations' foram mantidas no código para 
-    // uso futuro, mas a função agora exibe a mensagem fixa do Padre.
-    
     const verses = [
         { text: '"O Senhor é o meu pastor; nada me faltará."', ref: "Salmos 23:1" },
         { text: '"Tudo posso naquele que me fortalece."', ref: "Filipenses 4:13" },
@@ -350,7 +347,6 @@
     ];
 
     function updateInspiration() {
-        // --- ÁREA DE ATUALIZAÇÃO MANUAL (MENSAGEM DO PADRE) ---
         const mensagemDoPadre = {
             versiculo: '"Vigiai e orai, para que não entreis em tentação."',
             referencia: "Mateus 26:41",
@@ -362,7 +358,6 @@
         const mText = document.getElementById('motivation-text');
 
         if(vText && vRef && mText) {
-            // Efeito suave de transição
             [vText, vRef, mText].forEach(el => el.style.opacity = 0);
             
             setTimeout(() => {
@@ -374,11 +369,10 @@
         }
     }
 
-    // Inicializa a mensagem fixa (setInterval removido para respeitar a escolha do Padre)
     updateInspiration();
 
     // =========================================
-    // 3. FUNÇÕES DO MODAL
+    // 3. FUNÇÕES DO MODAL E ENVIO WHATSAPP
     // =========================================
     function openModal(pastoralName) {
         const modal = document.getElementById('pastoralModal');
@@ -409,8 +403,29 @@
     if (pastoralForm) {
         pastoralForm.onsubmit = function(e) {
             e.preventDefault();
-            alert("Obrigado! Seu interesse na pastoral foi enviado com sucesso.");
+            
+            // Captura os valores dos campos
+            const nome = document.getElementById('userName').value;
+            const telefone = document.getElementById('userPhone').value;
+            const mensagem = document.getElementById('userMessage').value;
+            const pastoral = document.getElementById('selectedPastoral').value;
+
+            // CONFIGURAÇÃO: Insira o número da secretaria aqui (apenas números)
+            const numeroSecretaria = "554136033312"; 
+
+            // Montagem da mensagem formatada para o WhatsApp
+            const textoWhatsApp = `*Interesse em Pastoral - Site*%0A%0A` +
+                                 `*Pastoral:* ${pastoral}%0A` +
+                                 `*Nome:* ${nome}%0A` +
+                                 `*WhatsApp:* ${telefone}%0A` +
+                                 `*Mensagem:* ${mensagem}`;
+
+            const url = `https://wa.me/${numeroSecretaria}?text=${textoWhatsApp}`;
+
+            // Abre o WhatsApp em nova aba e limpa o formulário
+            window.open(url, '_blank');
             closeModal();
+            pastoralForm.reset(); 
         };
     }
 
@@ -477,9 +492,8 @@
             desc.innerText = tempo.info;
             circulo.style.backgroundColor = tempo.cor;
             nomeCor.innerText = tempo.textoCor;
-            // Aplicando a borda no topo para o layout centralizado
             banner.style.borderTopColor = tempo.cor;
-            banner.style.borderLeftColor = "transparent"; // Remove a borda lateral antiga se existir
+            banner.style.borderLeftColor = "transparent"; 
         }
     }
 
